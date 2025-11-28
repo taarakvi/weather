@@ -29,13 +29,19 @@ button.addEventListener("click",async()=>{
     outputL2.innerText = `${result.location.country},`;
     outputL3.innerText = `${result.location.region},`;
     outputL4.innerText = `${result.location.tz_id},`;
-    tempC.innerText = `${result.current.temp_c}`
+    tempC.innerText = `${result.current.temp_c}°c`;
     console.log(result.location.country)
     console.log(result.location.name)
     console.log(result.location.region) 
     console.log(result.location.localtime)
     console.log(result.current.temp_c)
 })
+let cutB = document.querySelector(".cutB")
+cutB.addEventListener("click",()=>{
+    input.value = "";
+})
+
+
 
 // https://api.weatherapi.com/v1/current.json?key=fb87584aa1a148b399281903252611&q=London&aqi=yes
 
