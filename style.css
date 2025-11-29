@@ -112,7 +112,9 @@ button{
 .sect3{
     display: flex;
     gap: 20px;
-    justify-content: center;
+    /* justify-content: center; */
+    padding: 5px;
+    justify-content: space-around;
 }
 .sect3 div{
     width: 100px;
