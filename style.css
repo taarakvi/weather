@@ -53,9 +53,13 @@ body{
     border: none;
     padding: 10px;
     background-color: rgb(240, 240, 29);
+    /* opacity: 0.5; */
+    /* border-left: 1px solid black; */
+    border-right: 1px solid black;
+    color: black;
     cursor: pointer;
     font-size: large;
-    font-weight: 600;
+    /* font-weight: 600; */
 }
 .searchB{
     border: none;
@@ -104,12 +108,28 @@ button{
     width: 200px;
     /* height: 100px; */
 }
+/* sect3 */
+.sect3{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.sect3 div{
+    width: 100px;
+    /* height: 100px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+.sect3 div img{
+    width: 70px;
+    height: 70px;
+}
 @media(max-width:450px){
   .header{
-    /* border: 2px solid red; */
     font-size: 20px;
     display: flex;
-    /* align-items: end; */
 }
 .header img{
     width: 80px;

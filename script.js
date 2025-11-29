@@ -5,6 +5,11 @@ let button = document.querySelector(".searchB")
     let outputL2 = document.getElementById("outputL2")
     let outputL3 = document.getElementById("outputL3")
     let outputL4 = document.getElementById("outputL4")
+    let outputL5 = document.getElementById("outputL5")
+    let outputL6 = document.getElementById("outputL6")
+    let outputL7 = document.getElementById("outputL7")
+
+
 
     let tempC = document.getElementById("temp-c")
 
@@ -29,12 +34,20 @@ button.addEventListener("click",async()=>{
     outputL2.innerText = `${result.location.country},`;
     outputL3.innerText = `${result.location.region},`;
     outputL4.innerText = `${result.location.tz_id},`;
-    tempC.innerText = `${result.current.temp_c}°c`;
+    tempC.innerText = `${result.current.temp_c}°c | ${result.current.temp_f}°f`;
+    outputL5.innerText = `${result.current.wind_kph}k/h`;
+    outputL6.innerText = `${result.current.humidity}%`
+    outputL7.innerText = `${result.current.precip_in}%`
+
     console.log(result.location.country)
     console.log(result.location.name)
     console.log(result.location.region) 
     console.log(result.location.localtime)
-    console.log(result.current.temp_c)
+    console.log("temp-c : ",result.current.temp_c)
+    console.log("temp-f : ",result.current.temp_f)
+    console.log("wind : ",result.current.wind_kph)
+    console.log("humidity : ",result.current.humidity)
+    console.log("precipitation : ",result.current.precip_in)
 })
 let cutB = document.querySelector(".cutB")
 cutB.addEventListener("click",()=>{
